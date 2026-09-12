@@ -2,55 +2,5 @@
 
 Todo el prototipo está incluido: web, móvil/tablet, imágenes, estilos, registros, tarjetas y básculas demo, asistente de reglas y algoritmos visuales locales.
 
-**No necesita Node, npm, servidor propio, claves API, conectores ni archivos .env para utilizarse.**
-
-## Subir la carpeta al repositorio
-
-1. Descomprime el ZIP.
-2. Abre la carpeta `CUEVA_WM_GitHub`.
-3. Sube **su contenido** a la raíz del repositorio. `index.html` debe quedar en la raíz, junto a los archivos JS/CSS y la carpeta `assets`.
-4. Conserva los nombres y la estructura. No subas únicamente el ZIP.
-
-Subir archivos a un repositorio no publica la página automáticamente. Puedes guardar el código en un repositorio privado y decidir después dónde mostrarlo.
-
-## Mostrarlo con GitHub Pages, si quieres publicarlo
-
-Settings → Pages → Deploy from a branch → main → /(root) → Save. Después abre la URL indicada por GitHub. No hay comando de instalación ni compilación.
-
-**Privacidad:** GitHub Pages normalmente publica una web accesible por Internet, incluso cuando el repositorio es privado. Esta carpeta no lleva el control de acceso del Site privado de CUEVA. No actives Pages si quieres mantener esa restricción. La tarjeta es demo, no una contraseña.
-
-[Instrucciones y condiciones oficiales de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
-## Probar
-
-- Abre `index.html` en un navegador moderno para una prueba directa, si el navegador permite almacenamiento/cámara desde archivos locales. La referencia de funcionamiento es una URL HTTPS como la de Pages; los permisos con doble clic dependen del navegador.
-- Pulsa Tarjeta CUEVA y utiliza la tarjeta WM demo.
-- Personaliza el dashboard, registra una operación y adjunta una foto.
-- En Centro de pesaje, simula bruto/tara y úsalo en un movimiento.
-- En Lecturas de demostración, vincula un tag y simula su lectura.
-- En Visión, carga imagen/vídeo. Lab, Otsu, calidad y muestreo temporal se ejecutan localmente.
-
-## Dónde se guardan las pruebas
-
-Los datos y archivos quedan en IndexedDB **del navegador y de esa dirección**, no en GitHub. Recargar conserva los registros mientras el navegador mantenga su almacenamiento. Otro ordenador, otro perfil, otra URL o borrar datos del navegador no comparte ni conserva automáticamente ese espacio.
-
-Usa el botón de copia de la cabecera → **Descargar copia completa**. Incluye fotos, vídeos y análisis. Puedes restaurarla desde el mismo panel, confirmando el reemplazo. No subas esas copias al repositorio: pueden contener tus datos de prueba.
-
-La exportación JSON anterior de Registros sigue disponible, pero no equivale a la copia completa de evidencias. La copia completa admite hasta 150 MB al restaurar; úsala periódicamente para demos pequeñas. El almacenamiento está sujeto a la cuota y política del navegador.
-
-## Alcance
-
-- No se llama a APIs de backend: `prototype-store.js` atiende el contrato de datos dentro del navegador.
-- No hay autenticación real, multiusuario sincronizado ni equipos físicos conectados.
-- El asistente usa reglas, no un modelo generativo de pago.
-- La visión analiza píxeles y muestras: no certifica materiales, LER, masa ni conteo único de objetos.
-- Importaciones/exportaciones documentales se conservan como herramientas locales. No se tramita e-SIR.
-- La captura de pantalla/ventana es opcional; requiere seleccionar una ventana y permisos del navegador. No hace falta TeamViewer para probar con webcam o archivos.
-
-## Archivos principales
-
-`index.html`: entrada. `assets/`: imágenes. `app.js`, `evolution.js`, `mobile.js`, `interoperability.js`, `base.js`: funcionalidad. `algorithms.js`, `analysis-lab.js`: análisis. `prototype-store.js`: guardado autónomo. `prototype-ui.js`: ajustes de demo y copias. `*.css`: estilos. `local.js`: captura de ventana opcional.
-
-`tests/`: pruebas opcionales para desarrollo, no necesarias para usar ni publicar la demo. Ejecutables con Node sin paquetes adicionales. Incluyen un controlador simulado de IndexedDB; no sustituyen la prueba en navegadores físicos.
 
 No contiene credenciales, datos privados exportados, ni infraestructura de servidor. Los datos iniciales son la base de demostración del prototipo; el informe PDF vinculado también forma parte de los archivos que publicarías.
